@@ -1,19 +1,23 @@
-function printLastChar(str) {
+var n = 100;
+function FizzBuzz(n) {
+var fizz = "Fizz";
+var buzz = "Buzz";
+var fizz_buzz = "FizzBuzz";
 
-        str = str + " ";
-        for (var i = 1; i < str.length; i++) {
-       
-          if (str[i] === " ")
-            
-            document.write(str[i - 2 ] + " ");
-             if (str[i] === " ")
-            
-            document.write(str[i - 1 ] + " ");
-             
-            
+for (var i = 1; i <= n; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(fizz_buzz);
+    }
+    else if (i % 3 === 0) {
+        console.log(fizz);
+    }
+    else  if (i % 5 === 0) {
+        console.log(buzz);
+    }
+    else {
+        if (i % 3 != 0 || i % 5 != 0)
+            console.log(i)
         }
-      }
- 
-     
-      var str = "Apple";
-      printLastChar(str);
+    }
+}
+FizzBuzz(n);
